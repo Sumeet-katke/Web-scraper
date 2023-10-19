@@ -1,55 +1,70 @@
-Project Name: Amazon Product Web Scraper
+Amazon Product Scraper
 
+## Description
+This Python script scrapes product information from Amazon India's website, specifically focusing on bags. It consists of two parts:
 
-Description
-This project involves scraping product information from Amazon India's website, specifically focusing on bags. It consists of two parts:
+- Part 1: Scraping product information from multiple pages of search results.
+- Part 2: Extracting additional details from individual product pages.
 
-Part 1: Scraping product information from multiple pages of search results.
-Part 2: Extracting additional details from individual product pages.
-The data collected will be exported in CSV format.
+The scraped data is saved in CSV files, which are stored in this GitHub repository.
 
-Table of Contents:-
-Installation
-Usage
-Scraping Details
-Exported Data
-Contributing
-License
-
-
-Installation
-
-Clone this repository to your local machine.
-git clone https://github.com/yourusername/amazon-product-scraper.git
+## Installation
+- Clone this repository to your local machine.
+git clone https://github.com/Sumeet-katke/Web-scraper.git
 
 Install the required dependencies:
 pip install -r requirements.txt
 
-Scraping Details
-Part 1
-In Part 1, we scrape product information from Amazon search result pages. We aim to scrape the following details for each product:
+### Note: Amazon Web Scraping Policies
+
+This web scraping project is subject to Amazon's web scraping policies and restrictions. Amazon may implement various measures to prevent and limit web scraping activities on their platform. Due to these policies, the functionality of this web scraper may be limited or restricted, and it may not work optimally. Some potential issues and limitations you might encounter include:
+
+IP Blocking: Amazon may temporarily or permanently block the IP address from which scraping requests are made if they detect excessive or unauthorized scraping.
+
+Rate Limiting: Amazon may impose rate limits on requests, leading to slower scraping processes or incomplete data collection.
+
+Changes in Website Structure: Amazon frequently updates its website's structure, which can break the scraping code. As a result, the code may need periodic adjustments to remain functional.
+
+Captchas and Authentication: Amazon may require additional user interactions, such as solving CAPTCHAs or providing authentication, to access certain data, making automated scraping more challenging.
+
+Legal Considerations: Comply with Amazon's terms of service and policies, as well as relevant laws and regulations, when conducting web scraping activities on their platform.
+
+Please be aware that while this web scraper is designed to fetch data from Amazon, its performance and functionality may be impacted by the factors mentioned above
+
+# Usage
+Modify the URLs in the code to target the desired product category and number of pages to scrape.
+
+Run the script to scrape the data:
+python ecom_ai.py
+
+The scraped data will be saved in CSV files (product_listings.csv and product_details.csv).
+
+
+## Scraping Details
+#Part 1
+In Part 1, we scrape product information from Amazon search result pages. We extract the following details for each product:
 
 Product URL
 Product Name
 Product Price
 Rating
 Number of Reviews
-We use a web scraping library 'bs4 from BeautifulSoup' to accomplish this.
 
-Part 2
-In Part 2, we visit individual product pages using the Product URLs obtained in Part 1 and extract additional information, including:
+
+#Part 2
+In Part 2, we visit individual product pages and extract additional information, including:
 
 Description
 ASIN
 Product Description
 Manufacturer
-Around 200 Product URLs are visited and data is collected.
+The data collected in Part 1 and Part 2 is saved in separate CSV files.
 
 Exported Data
-The scraped data is saved in CSV format. The CSV files are named appropriately for your convenience.
+The scraped data is saved in CSV format:
 
-Deployment
-Please share the GitHub repository link, where the code and documentation are hosted, for deployment and access to the collected data.
+product_listings.csv: Contains data from Part 1, including product listings.
+product_details.csv: Contains data from Part 2, including additional product details.
 
-GitHub Repository
-Your GitHub Repository Link
+GitHub Repository Link
+https://github.com/Sumeet-katke/Web-scraper
